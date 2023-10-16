@@ -9,7 +9,9 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     try {
-        const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup");
+        const response = await fetch(
+            "https://fsa-jwt-practice.herokuapp.com/signup"
+            );
         const result = await response.json();
         console.log(result);
     } catch (error) {
@@ -33,8 +35,8 @@ return (
     <label>
         Password: 
         <input 
-        value={username} 
-        onChange={(e) => setUsername(e.target.value)} />
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} />
     </label>
     <button>Submit</button>
   </form>
